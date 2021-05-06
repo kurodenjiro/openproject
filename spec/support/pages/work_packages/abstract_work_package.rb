@@ -93,7 +93,7 @@ module Pages
 
     def ensure_page_loaded
       expect_angular_frontend_initialized
-      expect(page).to have_selector('.work-package-details-activities-activity-contents .user',
+      expect(page).to have_selector('.op-user-activity--user-name',
                                     text: work_package.journals.last.user.name,
                                     minimum: 1,
                                     wait: 10)
